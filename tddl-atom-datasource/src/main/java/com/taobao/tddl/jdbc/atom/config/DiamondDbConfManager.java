@@ -32,17 +32,7 @@ public class DiamondDbConfManager implements DbConfManager {
 	private volatile List<ConfigDataListener> globalDbConfListener = new ArrayList<ConfigDataListener>();
 	private volatile List<ConfigDataListener> appDbConfListener = new ArrayList<ConfigDataListener>();
 
-	public void init() {
-		configFactory = new DefaultConfigDataHandlerFactory();
-		Map<String, String> config = new HashMap<String, String>();
-		config.put("group", TAtomConstants.DEFAULT_DIAMOND_GROUP);
-		globalHandler = configFactory.getConfigDataHandlerWithListenerListCE(
-				globalConfigDataId, globalDbConfListener,
-				Executors.newSingleThreadScheduledExecutor(), config);
-		appDBHandler = configFactory.getConfigDataHandlerWithListenerListCE(
-				appConfigDataId, appDbConfListener,
-				Executors.newSingleThreadScheduledExecutor(), config);
-	}
+	public void init() {		configFactory = new DefaultConfigDataHandlerFactory();		Map<String, String> config = new HashMap<String, String>();		config.put("group", TAtomConstants.DEFAULT_DIAMOND_GROUP);		globalHandler = configFactory.getConfigDataHandlerWithListenerListCE(globalConfigDataId, globalDbConfListener,				Executors.newSingleThreadScheduledExecutor(), config);		appDBHandler = configFactory.getConfigDataHandlerWithListenerListCE(appConfigDataId, appDbConfListener,				Executors.newSingleThreadScheduledExecutor(), config);	}
 
 	public String getAppDbConfDataId() {
 		return appConfigDataId;
