@@ -350,5 +350,5 @@ public class TAtomDataSourceUnitTest {
 
 	private interface ChangeTestConfig {
 		Properties doChange(Properties prop);
-	}
+	}	
 }
