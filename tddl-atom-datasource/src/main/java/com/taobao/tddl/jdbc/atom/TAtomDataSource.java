@@ -14,7 +14,7 @@ public class TAtomDataSource extends AbstractTAtomDataSource {
 	private static Map<String, TAtomDsConfHandle> cacheConfHandleMap = new HashMap<String, TAtomDsConfHandle>();
 
 	private volatile TAtomDsConfHandle dsConfHandle = new TAtomDsConfHandle();
-
+	/**	 * ≥ı ºªØ	 */
 	public void init() throws Exception {
 		String dbName = TAtomConstants.getDbNameStr(this.getAppName(), this.getDbKey());
 		synchronized (cacheConfHandleMap) {
