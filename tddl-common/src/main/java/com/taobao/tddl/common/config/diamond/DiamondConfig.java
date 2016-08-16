@@ -1,12 +1,7 @@
 /*(C) 2007-2012 Alibaba Group Holding Limited.	 *This program is free software; you can redistribute it and/or modify	*it under the terms of the GNU General Public License version 2 as	* published by the Free Software Foundation.	* Authors:	*   junyu <junyu@taobao.com> , shenxun <shenxun@taobao.com>,	*   linxuan <linxuan@taobao.com> ,qihao <qihao@taobao.com> 	*/	//Copyright(c) Taobao.com
 package com.taobao.tddl.common.config.diamond;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
-import com.taobao.diamond.client.DiamondConfigure;
-import com.taobao.diamond.client.impl.DiamondClientFactory;
+import java.util.Arrays;import java.util.List;import java.util.Map;import com.taobao.diamond.client.DiamondConfigure;import com.taobao.diamond.client.impl.DiamondClientFactory;
 
 /**
  * @description
@@ -15,10 +10,9 @@ import com.taobao.diamond.client.impl.DiamondClientFactory;
  * @since 1.6
  * @date 2011-1-17œ¬ŒÁ07:21:41
  */
-public class DiamondConfig {
-	private volatile static DiamondConfigure configure = DiamondClientFactory
-			.getSingletonDiamondSubscriber().getDiamondConfigure();
-
+@SuppressWarnings("deprecation")public class DiamondConfig {	
+	private volatile static DiamondConfigure configure = DiamondClientFactory.getSingletonDiamondSubscriber().getDiamondConfigure();
+	/**	 * daimond≈‰÷√	 * 	 * @param prop	 */
 	protected static void handleConfig(Map<String,Object> prop) {
 		if(null==prop){
 			return;
